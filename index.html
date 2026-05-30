@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Meliana ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- MUSIC -->
+    <audio id="bgMusic" loop>
+        <source src="music/aboutyou.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- MOON -->
+    <div class="moon"></div>
+
+    <!-- AURORA -->
+    <div class="aurora">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- OPENING ENVELOPE -->
+
+    <section id="opening" class="opening">
+
+        <div class="envelope-container">
+
+            <div class="envelope">
+
+                <div class="envelope-front"></div>
+
+                <div class="letter">
+
+                    <h2>💌 Untuk Meliana</h2>
+
+                    <p>
+                        Ada seseorang yang ingin menyampaikan sesuatu...
+                    </p>
+
+                    <button onclick="openLetter()">
+                        Buka Surat ❤️
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MAIN CONTENT -->
+
+    <main id="mainContent">
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="glass-card">
+
+                <h1>
+                    Happy Birthday
+                </h1>
+
+                <h2>
+                    Meliana Putri Nurhaliza ❤️
+                </h2>
+
+                <h3>
+                    31 Mei 2010
+                </h3>
+
+                <p class="quote">
+                    "Beberapa orang hadir dalam hidup kita
+                    dan meninggalkan jejak yang tidak mudah dilupakan."
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- LETTER -->
+
+        <section class="love-letter">
+
+            <div class="glass-card">
+
+                <h2>💌 Surat Untuk Kamu</h2>
+
+                <p id="typingText"></p>
+
+            </div>
+
+        </section>
+
+        <!-- POLAROID GALLERY -->
+
+        <section class="polaroid-section">
+
+            <h2>📸 Kenangan</h2>
+
+            <div class="polaroid-gallery">
+
+                <div class="polaroid">
+                    <img src="gendong.jpg">
+                    <span>❤️</span>
+                </div>
+
+                <div class="polaroid">
+                    <img src="fhotobox.jpg">
+                    <span>✨</span>
+                </div>
+
+                <div class="polaroid">
+                    <img src="fhotoduduk.jpg">
+                    <span>🌸</span>
+                </div>
+
+                <div class="polaroid">
+                    <img src="fhotohijabhitam.jpg">
+                    <span>💖</span>
+                </div>
+
+                <div class="polaroid">
+                    <img src="fhotohijabkrem.jpg">
+                    <span>🌙</span>
+                </div>
+
+                <div class="polaroid">
+                    <img src="rambut.jpg">
+                    <span>✨</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CINEMATIC SLIDESHOW -->
+
+        <section class="gallery">
+
+            <h2>
+                🎞️ Memories Slideshow
+            </h2>
+
+            <div class="slide-container">
+
+                <img id="bgImage" class="bg-image">
+
+                <img id="slideImage" class="main-image">
+
+            </div>
+
+        </section>
+
+        <!-- WISHES -->
+
+        <section class="message">
+
+            <div class="glass-card">
+
+                <h2>
+                    🌸 Selamat Ulang Tahun
+                </h2>
+
+                <p>
+                    Semoga setiap langkahmu membawa kebahagiaan.
+                </p>
+
+                <p>
+                    Semoga semua impianmu menemukan jalannya.
+                </p>
+
+                <p>
+                    Semoga kesehatan, keberuntungan,
+                    dan kebahagiaan selalu menyertaimu.
+                </p>
+
+                <p>
+                    Terima kasih untuk semua cerita,
+                    tawa,
+                    dan kenangan yang pernah ada.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- SURPRISE -->
+
+        <section class="surprise">
+
+            <button class="surprise-btn"
+                onclick="showSecret()">
+
+                🎁 Buka Hadiah Rahasia
+
+            </button>
+
+            <div id="secretBox">
+
+                <h2>💖 Surprise</h2>
+
+                <p>
+                    Selamat ulang tahun Meliana.
+                </p>
+
+                <p>
+                    Semoga selalu bahagia,
+                    sehat,
+                    dan dikelilingi orang-orang baik.
+                </p>
+
+                <p>
+                    Apa pun yang terjadi,
+                    doa baik akan selalu menyertaimu.
+                </p>
+
+                <p>
+                    ✨❤️🌸
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- FINAL SECTION -->
+
+        <section class="final-section">
+
+            <div class="glass-card">
+
+                <h2>
+                    Happy Birthday ❤️
+                </h2>
+
+                <p>
+                    Meliana Putri Nurhaliza
+                </p>
+
+                <p>
+                    31 Mei 2010
+                </p>
+
+                <p>
+                    Semoga hari-harimu selalu dipenuhi
+                    kebahagiaan dan hal-hal baik.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+                Made With Loveeee❤️
+            </p>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,502 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:linear-gradient(
+        135deg,
+        #ffdce9,
+        #ffeef6,
+        #fff8fc
+    );
+    color:#333;
+}
+
+/* ==========================
+   MOON
+========================== */
+
+.moon{
+    position:fixed;
+    top:50px;
+    right:50px;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:white;
+    box-shadow:
+    0 0 40px white,
+    0 0 80px white,
+    0 0 120px rgba(255,255,255,.7);
+    opacity:.7;
+    z-index:-1;
+}
+
+/* ==========================
+   AURORA
+========================== */
+
+.aurora{
+    position:fixed;
+    inset:0;
+    z-index:-3;
+    overflow:hidden;
+}
+
+.aurora span{
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.55;
+    animation:auroraMove 20s infinite alternate;
+}
+
+.aurora span:nth-child(1){
+    background:#ff9ecf;
+    top:-150px;
+    left:-100px;
+}
+
+.aurora span:nth-child(2){
+    background:#ffc8dd;
+    bottom:-150px;
+    right:-100px;
+}
+
+.aurora span:nth-child(3){
+    background:#ffe4f1;
+    top:40%;
+    left:30%;
+}
+
+.aurora span:nth-child(4){
+    background:#ffb6d8;
+    top:10%;
+    right:30%;
+}
+
+@keyframes auroraMove{
+
+    from{
+        transform:
+        translate(0,0)
+        scale(1);
+    }
+
+    to{
+        transform:
+        translate(120px,-100px)
+        scale(1.4);
+    }
+
+}
+
+/* ==========================
+   OPENING
+========================== */
+
+.opening{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(255,255,255,.2);
+    backdrop-filter:blur(20px);
+    z-index:9999;
+}
+
+.envelope-container{
+    width:350px;
+    height:260px;
+    position:relative;
+}
+
+.envelope{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+
+.envelope-front{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#ff9ecf;
+    border-radius:20px;
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.letter{
+    position:absolute;
+    inset:15px;
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+}
+
+.letter h2{
+    color:#ff4f96;
+}
+
+.letter button{
+    margin-top:20px;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    background:#ff5ea4;
+    color:white;
+    cursor:pointer;
+}
+
+/* ==========================
+   MAIN CONTENT
+========================== */
+
+#mainContent{
+    display:none;
+}
+
+/* ==========================
+   GLASS CARD
+========================== */
+
+.glass-card{
+    background:rgba(255,255,255,.25);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:30px;
+    padding:40px;
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.1);
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:80px;
+    color:#ff4f96;
+    font-family:'Dancing Script',cursive;
+}
+
+.hero h2{
+    margin-top:10px;
+}
+
+.hero h3{
+    margin-top:10px;
+    color:#666;
+}
+
+.quote{
+    margin-top:20px;
+    font-style:italic;
+}
+
+/* ==========================
+   LOVE LETTER
+========================== */
+
+.love-letter{
+    padding:80px 20px;
+    text-align:center;
+}
+
+#typingText{
+    margin-top:20px;
+    line-height:2;
+}
+
+/* ==========================
+   POLAROID
+========================== */
+
+.polaroid-section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.polaroid-gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    margin-top:40px;
+}
+
+.polaroid{
+    background:white;
+    padding:12px;
+    width:240px;
+    border-radius:8px;
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.polaroid:nth-child(odd){
+    transform:rotate(-4deg);
+}
+
+.polaroid:nth-child(even){
+    transform:rotate(4deg);
+}
+
+.polaroid:hover{
+    transform:scale(1.08);
+}
+
+.polaroid img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+.polaroid span{
+    display:block;
+    margin-top:10px;
+}
+
+/* ==========================
+   SLIDESHOW
+========================== */
+
+.gallery{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.slide-container{
+    position:relative;
+    max-width:1000px;
+    width:100%;
+    height:80vh;
+    margin:auto;
+    overflow:hidden;
+    border-radius:35px;
+}
+
+.bg-image{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:blur(30px) brightness(.45);
+    transform:scale(1.2);
+}
+
+.main-image{
+    position:relative;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    z-index:2;
+    transition:all .8s ease;
+}
+
+/* ==========================
+   MESSAGE
+========================== */
+
+.message{
+    padding:80px 20px;
+}
+
+.message .glass-card{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.message p{
+    margin-top:15px;
+    line-height:2;
+}
+
+/* ==========================
+   SURPRISE
+========================== */
+
+.surprise{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.surprise-btn{
+    border:none;
+    padding:16px 35px;
+    border-radius:40px;
+    background:#ff5ea4;
+    color:white;
+    cursor:pointer;
+    font-size:17px;
+}
+
+#secretBox{
+    display:none;
+    margin-top:30px;
+    max-width:700px;
+    margin-inline:auto;
+    padding:35px;
+    border-radius:25px;
+    background:rgba(255,255,255,.25);
+    backdrop-filter:blur(20px);
+}
+
+/* ==========================
+   FINAL
+========================== */
+
+.final-section{
+    padding:100px 20px;
+}
+
+.final-section .glass-card{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    padding:50px;
+    text-align:center;
+}
+
+/* ==========================
+   HEART
+========================== */
+
+.heart{
+    position:fixed;
+    bottom:-50px;
+    pointer-events:none;
+    animation:heartFloat 8s linear forwards;
+}
+
+@keyframes heartFloat{
+
+    to{
+        transform:
+        translateY(-120vh)
+        rotate(360deg);
+        opacity:0;
+    }
+
+}
+
+/* ==========================
+   PETAL
+========================== */
+
+.petal{
+    position:fixed;
+    top:-20px;
+    pointer-events:none;
+    animation:petalFall linear forwards;
+}
+
+@keyframes petalFall{
+
+    from{
+        transform:
+        translateX(0)
+        rotate(0deg);
+    }
+
+    to{
+        transform:
+        translateX(250px)
+        translateY(110vh)
+        rotate(720deg);
+    }
+
+}
+
+/* ==========================
+   STAR
+========================== */
+
+.star{
+    position:fixed;
+    width:4px;
+    height:4px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite;
+}
+
+@keyframes twinkle{
+
+    50%{
+        opacity:.2;
+        transform:scale(.4);
+    }
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .glass-card{
+        padding:25px;
+    }
+
+    .slide-container{
+        height:60vh;
+    }
+
+    .polaroid{
+        width:180px;
+    }
+
+    .polaroid img{
+        height:220px;
+    }
+
+    .moon{
+        width:80px;
+        height:80px;
+        top:20px;
+        right:20px;
+    }
+
+}
